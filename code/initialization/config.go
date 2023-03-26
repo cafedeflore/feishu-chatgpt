@@ -165,10 +165,9 @@ func (config *Config) GetKeyFile() string {
 func filterFormatKey(keys []string) []string {
 	var result []string
 	for _, key := range keys {
-		if strings.HasPrefix(key, "sk-") || strings.HasPrefix(key,
-			"fk") || strings.HasPrefix(key, "fastgpt") {
-			result = append(result, key)
-		}
+		result = append(result, key)
+		// if strings.HasPrefix(key, "sk-") {
+		// }
 	}
 	return result
 
